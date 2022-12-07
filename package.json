@@ -1,7 +1,7 @@
 {
   "name": "hexlet_entry_project",
   "version": "1.0.0",
-  "description": "simple math console game",
+  "description": "brain game",
   "type": "module",
   "bin": {
     "brain-progression": "bin/brain-progression.js"
