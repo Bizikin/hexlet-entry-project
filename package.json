@@ -1,31 +1,18 @@
 {
   "name": "hexlet_entry_project",
   "version": "1.0.0",
+  "description": "simple math console game",
   "type": "module",
-  "description": "*simple math console game*",
   "bin": {
     "brain-progression": "bin/brain-progression.js"
   },
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Bizikin/hexlet_entry_project.git"
-  },
   "author": "Bizikin Roman",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Bizikin/hexlet_entry_project/issues"
-  },
-  "homepage": "https://github.com/Bizikin/hexlet_entry_project#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.2"
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0"
   }
 }
