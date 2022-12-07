@@ -18,22 +18,22 @@ let array = [];
 let hideNumber;
 
 function getRandomArray() {
-  let progressionCount = getRandomPositiveInteger(1, 6);
+  const progressionCount = getRandomPositiveInteger(1, 6);
 
   array = Array.from({ length: getRandomPositiveInteger(5, 12) }).fill(0);
   array[0] = getRandomPositiveInteger(1, 15);
 
-  for (let i = 1; i < array.length; i++) {
+  for (let i = 1; i < array.length; i = i+i) {
     array[i] = array[i - 1] + progressionCount;
   }
   return array;
 }
 
 function hideRandomElement(inputArray) {
-  let randomIndex = getRandomPositiveInteger(0, inputArray.length - 1);
+  const randomIndex = getRandomPositiveInteger(0, inputArray.length - 1);
   hideNumber = inputArray[randomIndex];
-  inputArray[randomIndex] = "..";
-};
+  inputArray[randomIndex] = '..';
+}
 
 function startGameSession() {
 
@@ -43,10 +43,10 @@ function startGameSession() {
 
   do {
     console.log(array);
-    let answer = readlineSync.question('Your answer: ');
+    const answer = readlineSync.question('Your answer: ');
     if (+answer === hideNumber) {
-      console.log("Correct!");
-      counter++;
+      console.log('Correct!');
+      counter = counter + counter;
       getRandomArray();
       hideRandomElement(array);
     } else {
@@ -56,9 +56,7 @@ function startGameSession() {
       getRandomArray();
       hideRandomElement(array);
     }
-  } while (counter < 3)
-  console.log(`Congratulations, ${name}!`)
+  } while (counter < 3);
+  console.log(`Congratulations, ${name}!`);
 }
-
-
 startGameSession();
