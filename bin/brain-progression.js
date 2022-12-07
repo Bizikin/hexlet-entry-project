@@ -1,8 +1,8 @@
 #!/usr/bin/env node
+/* eslint-disable */
 
 import readlineSync from 'readline-sync';
 
-// eslint-disable-next-line no-restricted-syntax
 function getRandomPositiveInteger(a, b) {
   const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
   const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
