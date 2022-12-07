@@ -9,13 +9,14 @@ function getRandomPositiveInteger(a, b) {
     return Math.floor(result);
 }
 
+let array = [];
+let hideNumber;
+const description = 'What number is missing in the progression?';
+
 console.log('Welcome to the Brain Games!');
 const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
-console.log('What number is missing in the progression?');
-
-let array = [];
-let hideNumber;
+console.log(description);
 
 function getRandomArray() {
     let progressionCount = getRandomPositiveInteger(1, 6);
