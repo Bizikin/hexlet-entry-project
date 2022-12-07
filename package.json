@@ -1,8 +1,11 @@
 {
   "name": "hexlet_entry_project",
   "version": "1.0.0",
-  "type": "Commonjs",
+  "type": "module",
   "description": "*simple math console game*",
+  "bin": {
+    "brain-progression": "bin/brain-progression.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,11 +14,8 @@
     "type": "git",
     "url": "git+https://github.com/Bizikin/hexlet_entry_project.git"
   },
-  "author": "",
+  "author": "Bizikin Roman",
   "license": "ISC",
-  "bin": {
-    "brain-progression": "bin/brain-progression.js"
-  },
   "bugs": {
     "url": "https://github.com/Bizikin/hexlet_entry_project/issues"
   },
