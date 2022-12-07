@@ -2,6 +2,7 @@
 
 import readlineSync from 'readline-sync';
 
+// eslint-disable-next-line no-restricted-syntax
 function getRandomPositiveInteger(a, b) {
   const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
   const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
@@ -18,22 +19,22 @@ let array = [];
 let hideNumber;
 
 function getRandomArray() {
-  const progressionCount = getRandomPositiveInteger(1, 6);
+  let progressionCount = getRandomPositiveInteger(1, 6);
 
   array = Array.from({ length: getRandomPositiveInteger(5, 12) }).fill(0);
   array[0] = getRandomPositiveInteger(1, 15);
 
-  for (let i = 1; i < array.length; i = i+i) {
+  for (let i = 1; i < array.length; i++) {
     array[i] = array[i - 1] + progressionCount;
   }
   return array;
 }
 
 function hideRandomElement(inputArray) {
-  const randomIndex = getRandomPositiveInteger(0, inputArray.length - 1);
+  let randomIndex = getRandomPositiveInteger(0, inputArray.length - 1);
   hideNumber = inputArray[randomIndex];
-  inputArray[randomIndex] = '..';
-}
+  inputArray[randomIndex] = "..";
+};
 
 function startGameSession() {
 
@@ -43,10 +44,10 @@ function startGameSession() {
 
   do {
     console.log(array);
-    const answer = readlineSync.question('Your answer: ');
+    let answer = readlineSync.question('Your answer: ');
     if (+answer === hideNumber) {
-      console.log('Correct!');
-      counter = counter + counter;
+      console.log("Correct!");
+      counter++;
       getRandomArray();
       hideRandomElement(array);
     } else {
@@ -56,7 +57,10 @@ function startGameSession() {
       getRandomArray();
       hideRandomElement(array);
     }
-  } while (counter < 3);
-  console.log(`Congratulations, ${name}!`);
+  } while (counter < 3)
+  console.log(`Congratulations, ${name}!`)
 }
+
+
 startGameSession();
+
