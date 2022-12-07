@@ -43,7 +43,7 @@ function startGameSession() {
     hideRandomElement(array);
 
     do {
-        console.log(array);
+        console.log(`Question: ${array}`);
         let answer = readlineSync.question('Your answer: ');
         if (+answer === hideNumber) {
             console.log("Correct!");
